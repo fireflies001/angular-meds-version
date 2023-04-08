@@ -1,0 +1,20 @@
+<div class="container mx-auto mt-48">
+
+    <div class="md:w-2/6 mx-auto mb-10 border border-slate-300 shadow bg-red-600 text-white p-5 rounded-md" *ngIf="error">
+        <p>Error incorrect username or password, please try again!</p>
+    </div>
+    <form class="md:w-2/6 h-5/6 mx-auto"  [formGroup]="Login" (ngSubmit)="onSubmit()">
+        <div class="grid grid-col-2 border border-slate-300 shadow rounded-md p-10 pt-3">
+           <div class="flex mx-auto">
+            <img src="../../assets/img/medicine.png" class="h-36 mt-0 mb-5 flex-none">
+            <h1 class="flex-none text-6xl mt-20">Meds</h1>
+           </div>
+            <label >Username</label>
+            <input type="text" name="username" id="UserName" class="border border-blue-300 h-9 mt-3 p-3 rounded-md" placeholder="UserName" formControlName="username">
+            <label class="mt-5">Password</label>
+            <input type="text" name="password" id="Password" class="border border-blue-300 h-9 mt-3 p-3 rounded-md" placeholder="Password" formControlName="password">
+            <input type = "submit" class="mt-5 w-56 mx-auto bg-blue-600 text-white p-1 border border-slate-300 shadow rounded-md h-10" value="login">
+            
+        </div>
+    </form>
+</div>
